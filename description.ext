@@ -1,0 +1,60 @@
+// #### Mission Information
+// https://community.bistudio.com/wiki/Description.ext
+
+class Header
+{
+	gameType = "Coop";	// game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 20;	// maximum number of players the mission supports
+};
+
+author = "Someone [CVO]";
+
+onLoadName = "CVO Mission Title";                       // Loading Screen: Mission Title
+onLoadMission = "If you walk alone, you die alone";     // Loading Screen: Mission Description, short
+
+loadScreen = "data\loadScreen_cvo_default.paa";
+
+overviewPicture = "data\loadScreen_cvo_default.paa"; // The picture displayed in the mission selection screen
+
+briefingName = "Operation Some Thing"; // The Mission name with operation displayed in the mission selection men
+overviewText = "Description of the mission here"; // The text above the picture in the mission selection menu
+
+
+
+// ###### Default Stuff - Dont Touch unless really needed
+allowFunctionsLog = 1;
+enableDebugConsole = 1;
+cba_settings_hasSettingsFile = 1;
+
+
+// ###### AI Stuff 
+aiKills = 0; // Does not add AI to the scoreboard
+disabledAI = 1;
+
+
+// ###### Respawn Settings - CVO Defaults
+// https://community.bistudio.com/wiki/Description.ext#Respawn/Revive
+respawn = 3;
+respawnTemplates[] = {"Counter", "Wave", "ace_spectator"}; // "Tickets"
+
+respawnDelay = 120;
+respawnVehicleDelay = 99999;
+
+respawnOnStart = 0;
+respawnDialog = 0;
+respawnButton = 1;
+
+
+// ###### Cfg Functions - https://community.bistudio.com/wiki/CfgFunctions
+#include "CfgFunctions.hpp"
+
+
+// ###### CVO Defines
+#include "cvo_defines\cvo_arsenal_kits.hpp"
+#include "cvo_defines\cvo_csc_crates.hpp"
+#include "cvo_defines\cvo_csc_delivery_modes.hpp"
+#include "cvo_defines\cvo_csc_destinations.hpp"
+
+// ###### Other Includes
+
